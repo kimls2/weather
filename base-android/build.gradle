@@ -1,0 +1,37 @@
+import app.weather.buildsrc.Libs
+
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+}
+
+android {
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api project(':base')
+    implementation project(':data')
+
+    implementation Libs.AndroidX.Fragment.fragment
+    implementation Libs.AndroidX.coreKtx
+
+    implementation Libs.timber
+
+    implementation Libs.Hilt.library
+    kapt Libs.Hilt.compiler
+}

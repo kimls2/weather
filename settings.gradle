@@ -1,0 +1,14 @@
+rootProject.name = "WeatherApp"
+include ':app'
+include ':base'
+include ':base-android'
+include ':common-ui-view'
+include ':common-ui-resources'
+include ':common-ui-compose'
+include ':common-imageloading'
+include ':data'
+include ':domain'
+include ':metaweather'
+include ':network'
+
+include ':ui-home'

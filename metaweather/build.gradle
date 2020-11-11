@@ -1,0 +1,19 @@
+import app.weather.buildsrc.Libs
+
+apply plugin: 'kotlin'
+
+apply plugin: 'kotlin-kapt'
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+}
+
+dependencies {
+    implementation project(':base')
+
+    implementation Libs.OkHttp.okhttp
+    implementation Libs.Retrofit.retrofit
+    implementation Libs.Retrofit.gsonConverter
+
+    kapt Libs.Dagger.compiler
+}
