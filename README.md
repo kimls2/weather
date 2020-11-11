@@ -1,4 +1,4 @@
-# weather
+# Weather
 Simple weather application.
 
 ## Android development
